@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-AGENT FOR OPERATING BACKEND SYSTEMS</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>AI-AGENT FOR OPERATING BACKEND SYSTEMS</h1>
+        <p>Operate the backend with natural language inputs</p>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Created Time</th>
+                        <th>Updated Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in records %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Prompt Input Section -->
+    <div class="input-container">
+        <form method="POST">
+            <div class="input-wrapper">
+                <textarea cols="80" rows="1" id="prompt" name="prompt" placeholder="Enter your prompt here..." required></textarea>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
