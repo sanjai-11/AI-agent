@@ -1,0 +1,135 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f3f4f6, #e3e9f7);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url('static/home_background.jpg');
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: #4CAF50;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    font-weight: 400;
+}
+
+/* Table Section */
+.table-container {
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.table-wrapper {
+    max-height: 300px; /* Set a fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0; /* Keeps the header sticky while scrolling */
+    z-index: 1;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eaf7e9; /* Subtle green background for hover */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition for color */
+}
+
+
+/* Input Section */
+.input-container {
+    width: 80%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+textarea {
+    flex: 1;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    resize: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
